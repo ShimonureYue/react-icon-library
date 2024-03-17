@@ -2,10 +2,14 @@
   "name": "react-icon-library",
   "version": "1.0.0",
   "description": "React Icon library using SVGR",
-  "main": "index.js",
+  "main": "dist/react-icon-library.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "svgr": "npx @svgr/cli --title-prop --replace-attr-values '#303135=currentColor' --out-dir src assets"
+    "svgr": "npx @svgr/cli --title-prop --replace-attr-values '#303135=currentColor' --out-dir src assets",
+    "build": "rollup --config -w"
   },
   "keywords": [
     "react",
@@ -15,6 +19,16 @@
   "author": "Rogelio Vargas Marquez",
   "license": "ISC",
   "devDependencies": {
-    "@svgr/cli": "^8.1.0"
+    "@babel/core": "^7.24.0",
+    "@babel/plugin-transform-runtime": "^7.24.0",
+    "@babel/preset-env": "^7.24.0",
+    "@babel/preset-react": "^7.23.3",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-replace": "^5.0.5",
+    "@svgr/cli": "^8.1.0",
+    "rollup": "^4.13.0",
+    "rollup-plugin-filesize": "^10.0.0"
   }
 }
