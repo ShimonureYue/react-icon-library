@@ -4,7 +4,8 @@
   "description": "React Icon library using SVGR",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "svgr": "npx @svgr/cli --title-prop --replace-attr-values '#303135=currentColor' --out-dir src assets"
   },
   "keywords": [
     "react",
@@ -12,5 +13,8 @@
     "svgr"
   ],
   "author": "Rogelio Vargas Marquez",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@svgr/cli": "^8.1.0"
+  }
 }
